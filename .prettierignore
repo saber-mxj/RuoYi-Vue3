@@ -1,0 +1,11 @@
+/.github/*
+/.idea/*
+/bin/*
+/html/*
+/node_modules/**
+/public/*
+/dist/*
+
+**/*.svg
+**/*.sh
+.local
