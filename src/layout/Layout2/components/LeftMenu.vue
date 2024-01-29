@@ -16,8 +16,10 @@
 <script setup name="LeftMenu">
 import usePermissionStore from '@/store/modules/permission.js';
 import LeftMenuItem from '@/layout/Layout2/components/LeftMenuItem.vue';
+import { useRoute } from 'vue-router';
 
 const permissionStore = usePermissionStore();
+const route = useRoute();
 const sidebarRouters = computed(() => {
   console.log(
     permissionStore.sidebarRouters.filter((item) => !item.hidden),
@@ -30,6 +32,15 @@ const activeMenu = ref();
 function handleSelect(value) {
   activeMenu.value = value;
 }
+
+watchEffect(() => {
+  const { meta, path } = route;
+  // if set path, the sidebar will highlight the path you set
+  if (meta.activeMenu) {
+    activeMenu.value = meta.activeMenu;
+  }
+  activeMenu.value = path;
+});
 </script>
 
 <style lang="scss" scoped>

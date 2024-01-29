@@ -21,6 +21,7 @@ const levelList = ref([]);
 
 function getBreadcrumb() {
   // only show routes with meta.title
+  console.log(route, router.getRoutes(), 'route.matched');
   let matched = route.matched.filter((item) => item.meta && item.meta.title);
   const first = matched[0];
   // 判断是否为首页

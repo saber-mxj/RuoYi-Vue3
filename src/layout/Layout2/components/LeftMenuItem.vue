@@ -114,6 +114,12 @@ const leftMenuSubRef = ref(null);
 const primaryColor = useCssVar('--el-color-primary');
 const selectedBgColorStart = computed(() => colorToRgba(primaryColor.value, 0.2));
 const selectedBgColorEnd = computed(() => colorToRgba(primaryColor.value, 0.1));
+
+watchEffect(() => {
+  if (!showSubMenu.value) {
+    showSubMenu.value = props.activeMenu?.startsWith(props.basePath);
+  }
+});
 </script>
 
 <style lang="scss" scoped>
