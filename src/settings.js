@@ -48,5 +48,5 @@ export default {
   /**
    * 布局类型
    */
-  layoutType: 'Layout1'
+  layoutType: 'Layout2'
 };

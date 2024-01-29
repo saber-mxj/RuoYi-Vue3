@@ -53,3 +53,34 @@ export function getDarkColor(color, level) {
   }
   return rgbToHex(rgb[0], rgb[1], rgb[2]);
 }
+
+/**
+ * 颜色转RGBA带透明度设置
+ */
+export function colorToRgba(str, opacity) {
+  if (!str) return;
+  if (str.trim().startsWith('rgb')) {
+    const [r, g, b] = str.replace(/rgb?a?\(?\)?/g, '').split(',');
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+  }
+  let i;
+  let sColor = str.toLowerCase();
+  if (sColor) {
+    if (sColor.length === 4) {
+      let sColorNew = '#';
+      for (i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
+      }
+
+      sColor = sColorNew;
+    }
+    //处理六位的颜色值
+    const sColorChange = [];
+    for (i = 1; i < 7; i += 2) {
+      sColorChange.push(parseInt('0x' + sColor.slice(i, i + 2)));
+    }
+    return 'rgba(' + sColorChange.join(',') + ',' + opacity + ')';
+  } else {
+    return sColor;
+  }
+}

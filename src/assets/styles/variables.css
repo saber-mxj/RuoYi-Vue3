@@ -1,0 +1,15 @@
+:root {
+  --bc-font-family-bold: 'AlibabaPuHuiTi-Bold', 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  --bc-font-family-heavy: 'AlibabaPuHuiTi-Heavy', 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  --bc-font-family-light: 'AlibabaPuHuiTi-Light', 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  --bc-font-family-regular: 'AlibabaPuHuiTi-Regular', 'Helvetica Neue', Helvetica,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  --bc-font-family-medium: 'AlibabaPuHuiTi-Medium', 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+
+  /* 修改elementPlus的变量 */
+  --el-font-family: var(--bc-font-family-regular);
+}
