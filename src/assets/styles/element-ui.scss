@@ -90,3 +90,17 @@
 .el-dropdown .el-dropdown-link {
   color: var(--el-color-primary) !important;
 }
+
+// table
+.el-table .el-table__header-wrapper th, .el-table .el-table__fixed-header-wrapper th {
+  font-size: var(--el-font-size-base) !important;
+}
+.el-table__body tr.current-row>td.el-table__cell {
+  background-color: var(--el-table-current-row-bg-color) !important;
+}
+
+// collapse
+.el-collapse {
+  --el-collapse-header-font-size: var(--el-font-size-base);
+  --el-collapse-content-font-size: var(--el-font-size-base);
+}

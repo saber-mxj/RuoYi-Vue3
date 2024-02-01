@@ -1,4 +1,5 @@
 import request from '@/utils/request';
+import { encrypt } from '@/utils/jsencrypt.js';
 
 // 登录方法
 export function login(username, password, code, uuid) {

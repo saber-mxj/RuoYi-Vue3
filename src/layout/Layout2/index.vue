@@ -44,9 +44,7 @@
       <section class="layout2__right__tags"></section>
 
       <section class="layout2__right__content">
-        <el-scrollbar style="height: 100%">
-          <app-main />
-        </el-scrollbar>
+        <app-main style="height: 100%" />
       </section>
     </section>
 
@@ -196,6 +194,8 @@ function setLayout() {
       overflow: hidden;
       background-color: #fff;
       border-radius: var(--el-border-radius-base);
+      color: var(--el-text-color-regular);
+      font-size: 14px;
     }
   }
 }
